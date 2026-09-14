@@ -1,0 +1,1 @@
+import{t as e}from"./tool-screen-BhDmABeT.js";import{v as t}from"./index-Cw-h5tlG.js";var n=t(),r=()=>(0,n.jsx)(e,{id:`png-webp`});export{r as component};

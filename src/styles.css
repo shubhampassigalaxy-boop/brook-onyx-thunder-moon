@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #f4f1ea;
+  --color-surface: #fcfaf6;
+  --color-surface-2: #ebe6db;
+  --color-ink: #161513;
+  --color-fg: #161513;
+  --color-muted: #5c5850;
+  --color-subtle: #8a8478;
+  --color-primary: #1c3d5a;
+  --color-primary-fg: #f4f1ea;
+  --color-border: #d9d2c4;
+  --color-ring: #1c3d5a;
+  --color-ok: #2f5d45;
+  --color-danger: #8a3a2a;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Newsreader", ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --shadow-border: 0 0 0 1px rgba(22, 21, 19, 0.06), 0 1px 2px -1px rgba(22, 21, 19, 0.06),
+    0 2px 4px 0 rgba(22, 21, 19, 0.04);
+  --shadow-border-hover: 0 0 0 1px rgba(22, 21, 19, 0.1), 0 1px 2px -1px rgba(22, 21, 19, 0.08),
+    0 8px 24px -12px rgba(22, 21, 19, 0.12);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-fg);
+    min-height: 100dvh;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-fg);
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
